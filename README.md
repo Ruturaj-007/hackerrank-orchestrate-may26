@@ -146,5 +146,4 @@ Escalated cases include: billing disputes, refund requests, identity theft, secu
 ## Acknowledgments
 Special thanks to **HackerRank** for organizing this **AI Agent Orchestrate Challenge** and providing the opportunity to develop this solution.
 
-![Terminal Output](assets/support_terminal_result.png)
 ![HackerRank Orchestrate AI Agent Challenge](assets/HackerRank_Orchestrate.jpg)
