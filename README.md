@@ -1,4 +1,4 @@
-# HackerRank Orchestrate — Multi-Domain Support Triage Agent
+# HackerRank Orchestrate Multi-Domain Support Triage Agent
 
 A terminal-based support triage agent that classifies, routes, and responds to support tickets across three domains: HackerRank, Claude, and Visa.
 
@@ -142,3 +142,9 @@ Model used: `llama-3.3-70b-versatile`
 | Escalated | 10 |
 
 Escalated cases include: billing disputes, refund requests, identity theft, security vulnerability reports, fraud, prompt injection attempts, and subscription changes — all correctly routed without LLM involvement.
+
+## Acknowledgments
+Special thanks to **HackerRank** for organizing this **AI Agent Orchestrate Challenge** and providing the opportunity to develop this solution.
+
+![Terminal Output](assets/support_terminal_result.png)
+![HackerRank Orchestrate AI Agent Challenge](assets/HackerRank_Orchestrate.jpg)
