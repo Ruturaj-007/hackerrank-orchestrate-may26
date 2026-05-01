@@ -100,10 +100,11 @@ def main():
 
     # process 
     for idx, row in enumerate(rows):
-        issue   = row.get("issue",   "") or ""
-        subject = row.get("subject", "") or ""
-        company = row.get("company", "") or ""
-
+        # NEW
+        issue   = row.get("Issue",   row.get("issue",   "")) or ""
+        subject = row.get("Subject", row.get("subject", "")) or ""
+        company = row.get("Company", row.get("company", "")) or ""
+        
         try:
             result = agent.process(issue, subject, company)
         except Exception as exc:
