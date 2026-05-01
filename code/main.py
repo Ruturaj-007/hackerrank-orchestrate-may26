@@ -13,6 +13,9 @@ from agent   import TriageAgent
 from logger  import RunLogger
 from rag     import Retriever, load_corpus
 
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # defaults (relative to code/) 
 DEFAULT_INPUT  = Path(__file__).parent.parent / "support_tickets" / "support_tickets.csv"
