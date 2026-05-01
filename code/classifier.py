@@ -5,11 +5,14 @@ import json
 import os
 import re
 import time
+from pathlib import Path
 from typing import Optional
-
 from groq import Groq
 
 # client setup 
+
+from dotenv import load_dotenv
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 _GROQ_CLIENT = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
@@ -138,7 +141,10 @@ Classify the ticket and return the JSON object.
     # Sanitise
     if result.get("request_type") not in VALID_REQUEST_TYPES:
         result["request_type"] = "product_issue"
-    result.setdefault("product_area",        "general_support")
+
+    if not result.get("product_area"):
+        result["product_area"] = "general_support"
+
     result.setdefault("should_escalate",     False)
     result.setdefault("escalation_reason",   "")
     result.setdefault("justification",       "")
